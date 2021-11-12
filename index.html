@@ -82,7 +82,18 @@ function onMapClick(e) {
 }
 
 mymap.on('click', onMapClick);
-
+	    
+    var college = L.layerGroup([marker, marker1]).addTo(mymap);
+      
+	var baseMaps = {
+           "OSM": osm,
+           "Google": google
+        };
+	var overlayMaps = {
+	    "Surface": surface,
+            "College": college
+        };
+        L.control.layers(baseMaps, overlayMaps).addTo(mymap);
 	    mymap.addControl(new L.Control.Fullscreen());	    
 	  </script>
 	</body>
