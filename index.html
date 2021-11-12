@@ -21,6 +21,7 @@
 	    var marker = L.marker([51.12983, -2.73341]).addTo(mymap);
 	       marker.bindPopup("<b>C Block</b><br>T-Level Digital");
 	    //marker.bindPopup("<b>C Block</b><br>T-Level Digital").openPopup();
+	    var marker1 = L.marker(51.120832, -2.726777]).addTo(mymap);
 	    
 	    var circle = L.circle([51.12983, -2.73341], { color: 'red',
     fillColor: '#f03',
@@ -53,8 +54,6 @@ function onMapClick(e) {
 }
 
 mymap.on('click', onMapClick);
-	    
-	    var marker1 = L.marker(51.120832, -2.726777]).addTo(mymap);
 	  </script>
 	</body>
       </html>
